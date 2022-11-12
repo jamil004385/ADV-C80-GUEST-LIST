@@ -1,32 +1,38 @@
-var Name_Of_The_Guest_Array = [];
-function Submit() {
-   var Guest_name = document.getElementById("Enter_name").value;
-   Name_Of_The_Guest_Array.push(Guest_name);
-   document.getElementById("Display_names").innerHTML = Name_Of_The_Guest_Array;
-   console.log(Name_Of_The_Guest_Array);
-   var length_of_the_array = Name_Of_The_Guest_Array.length;
-    console.log(length_of_the_array);
-}
-function Show_list() {
-    var i = Name_Of_The_Guest_Array.join("<br>");
-    console.log(Name_Of_The_Guest_Array);
-    document.getElementById("Show_names").innerHTML = i.toString();
-}
-function sorting() {
-    Name_Of_The_Guest_Array.sort();
-    var i = Name_Of_The_Guest_Array.join("<br>");
-    console.log(Name_Of_The_Guest_Array);
-    document.getElementById("Sorted_names").innerHTML = i.toString();
-}
-function Search() {
-    var s = document.getElementById("Search_name").value;
-    var found = 0;
-    var j;
-    for(j=0; j<Name_Of_The_Guest_Array.length; j++) {
-        if(s==Name_Of_The_Guest_Array[j]) {
-            found = found+1;
-        }
-    }
-    document.getElementById("Search_names").innerHTML = "Name Found "+found+" Time/s";
-    console.log("Found Name "+found+" Time/s");
-}
+canvas = document.getElementById("myCanvas");
+ctx = canvas.getContext("2d");
+
+ctx.beginPath();
+ctx.strokeStyle = "Grey";
+ctx.lineWidth = 4;
+ctx.rect(150,143,430,200);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle = "Blue";
+ctx.lineWidth = 5;
+ctx.arc(250,210,40,0,2 * Math.PI);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle = "Black";
+ctx.lineWidth = 5;
+ctx.arc(350,210,40,0,2 * Math.PI);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle = "red";
+ctx.lineWidth = 5;
+ctx.arc(450,210,40,0,2 * Math.PI);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle = "Yellow";
+ctx.lineWidth = 5;
+ctx.arc(300,250,40,0,2 * Math.PI);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle = "Green";
+ctx.lineWidth = 5;
+ctx.arc(400,250,40,0,2 * Math.PI);
+ctx.stroke();
